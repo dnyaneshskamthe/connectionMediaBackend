@@ -76,4 +76,9 @@ router.post('/login',async (req,res)=>{
 })
 
 
+app.get('/logout',async(req,res)=>{
+    res.clearCookie('');
+    res.redirect('/');
+})
+
 module.exports=router;
